@@ -1,1 +1,1 @@
-# MSINET-digits_classifier
+# MNIST-digits_classifier
