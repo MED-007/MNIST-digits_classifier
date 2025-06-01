@@ -13,7 +13,7 @@ x_train, x_test, y_train, y_test= train_test_split(x, y, test_size=0.2, random_s
 scaler = StandardScaler()
 x_train_scaled= scaler.fit_transform(x_train)
 x_test_scaled= scaler.transform(x_test)
-mlp = MLPClassifier(hidden_layer_sizes=(50,), max_iter=10, alpha=1e-4, solver='sgd', verbose=10, random_state=1)
+mlp = MLPClassifier(hidden_layer_sizes=(100,), max_iter=15, alpha=1e-4, solver='adam', verbose=10, random_state=1)
 mlp.fit(x_train_scaled, y_train)
 y_pred = mlp.predict(x_test_scaled)
 
