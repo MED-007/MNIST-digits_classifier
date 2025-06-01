@@ -6,7 +6,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 
-x,y =fetch_openml('mnist_784', version=1, return_X_y=True, as_frame=False)
+x,y =fetch_openml('mnist_784', version=1, return_x_y=True, as_frame=False)
 x=x/255.0
 
 x_train, x_test, y_train, y_test= train_test_split(x, y, test_size=0.2, random_state=42)
