@@ -17,7 +17,7 @@ mlp = MLPClassifier(hidden_layer_sizes=(100,), max_iter=15, alpha=1e-4, solver='
 mlp.fit(x_train_scaled, y_train)
 y_pred = mlp.predict(x_test_scaled)
 
-print(f"Test Accuracy: {accuracy_score(y_test, y_pred):.4f}")
+print("Test Accuracy: "+str(round(accuracy_score(y_test, y_pred), 4)))
 def plot_digits(x, y_true, y_pred=None, n=10):
     plt.figure(figsize=(12, 4))
     for i in range(n):
